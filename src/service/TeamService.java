@@ -14,16 +14,12 @@ public class TeamService {
 		System.out.println("1.Get all team details");
 		System.out.println("2.Get team details by short name");
 		System.out.println("3.Please enter id for getting  related team details: ");
-
-		
 		int input = sc.nextInt();		
 		System.err.println("you have selected option: " +input);
 		
-		System.out.println("3.Please enter id for getting  related team details: ");
+		//System.out.println("3.Please enter id for getting  related team details: ");
 
-		int id = sc.nextInt();
-        System.out.println("your entered  id is : "+id);
-		
+	//			
 		switch (input) {
 		case 1: {
 			
@@ -44,16 +40,20 @@ public class TeamService {
 		//get team details by short name
 		case 2:{
 			System.out.println("Please enter your fav team's short name: ");
-			String teamShortName = sc.next();
-			System.err.println("Entered team short name is : "+teamShortName);
-			getTeamByShortName(teamShortName);
+			String ShortName = sc.next();
+			System.err.println("Entered team short name is : "+ShortName);
+			getTeamByShortName(ShortName);
 			break;	
 		}
 		
 		case 3:{
 			// for get team details by  id
 			//further logic should not have switch case
-			
+			System.out.println("Please enter id: ");
+			int id = sc.nextInt();
+		       System.out.println("your entered  id is : "+id);
+
+		
 			if(id==101) {
 				System.out.println(TeamRepository.getMITeamDetails());
 			}
@@ -108,63 +108,63 @@ public class TeamService {
 	
 	private void getTeamByShortName(String shortName) {
 		//here we write a code logic to get team details by short name 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter shortName of team: ");
-		String shortName1 = sc.nextLine();
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("Enter shortName of team: ");
+//        shortName = sc.nextLine();
 
-		if (shortName1.equals("MI")) {
+		if (shortName.equals("MI")) {
 			
 			System.out.println(TeamRepository.getMITeamDetails());
 		}
-		else if(shortName1.equals("RCB")){
+		else if(shortName.equals("RCB")){
 			System.out.println(TeamRepository.getRCBTeamDetails());
 		}
 		
-		else if(shortName1.equals("PK11")){
+		else if(shortName.equals("PK11")){
 			
 	     System.out.println(TeamRepository.getPunjabKings11TeamDetails());
 
 		}
 
-		else if(shortName1.equals("KKR")){
+		else if(shortName.equals("KKR")){
 	
 	    System.out.println(TeamRepository.getKolkattaNightRidersTeamDetails());
 
 	}
 
-		else if(shortName1.equals("CSK")){
+		else if(shortName.equals("CSK")){
 	
 	System.out.println(TeamRepository.getChennaiTeamDetails());
 	}
 
-		else if(shortName1.equals("DC")){
+		else if(shortName.equals("DC")){
 	
 	System.out.println(TeamRepository.getDelhiCapitalsTeamDetails());
 
 	
 	}
 
-		else if(shortName1.equals("GT")){
+		else if(shortName.equals("GT")){
 	
 	System.out.println(TeamRepository.getGujratTitansTeamDetails());
 
 	
 	}
 
-		else if(shortName1.equals("LSG")){
+		else if(shortName.equals("LSG")){
 	
 	System.out.println(TeamRepository.getLukhnowSuperGiantsTeamDetails());
 
 	}
 
-		else if(shortName1.equals("RR")){
+		else if(shortName.equals("RR")){
 	
 	System.out.println(TeamRepository.getRajasthanRoyalsTeamDetails());
 
 		
 	}
 
-		else if(shortName1.equals("SH")){
+		else if(shortName.equals("SH")){
 	
 	System.out.println(TeamRepository.getSunrisersHydrabaadTeamDetails());
 

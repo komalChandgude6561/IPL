@@ -8,6 +8,7 @@ public class Team {
 	private String coachName;
 	private float nRR;
 	private boolean isQualified;
+	private String shortName;
 	
 	//setter-getter
 	public int getId() {
@@ -58,7 +59,7 @@ public class Team {
 		 this.isQualified = isQualified;
 	 }		
      
-     public String shortName;
+     
 
 	public String getShortName() {
 		return shortName;
