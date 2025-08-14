@@ -1,114 +1,218 @@
 package service;
 
+import java.util.Scanner;
+
 import entity.Team;
 import repository.TeamRepository;
 
 public class TeamService {
 
-	
-	public void printTeamDetails() {
-		Team team = TeamRepository.getMITeamDetails();
+	public void selectOptions() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Welcome to the IPL portal ");
+		System.out.println("Please select following options - ");
+		System.out.println("1.Get all team details");
+		System.out.println("2.Get team details by short name");
+		System.out.println("3.Please enter id for getting  related team details: ");
+
+		
+		int input = sc.nextInt();		
+		System.err.println("you have selected option: " +input);
+		
+		System.out.println("3.Please enter id for getting  related team details: ");
+
+		int id = sc.nextInt();
+        System.out.println("your entered  id is : "+id);
+		
+		switch (input) {
+		case 1: {
 			
-			System.out.println(team.getId());
-			System.out.println(team.getTeamName());
-			System.out.println(team.getCaptainName());
-			System.out.println(team.getCoachName());
-		System.out.println(team.getnRR());
-			System.out.println(team.isQualified());
-     }
+			//get all team details
+			System.out.println(TeamRepository.getMITeamDetails());
+			System.out.println(TeamRepository.getRCBTeamDetails());
+			System.out.println(TeamRepository.getPunjabKings11TeamDetails());
+			System.out.println(TeamRepository.getKolkattaNightRidersTeamDetails());
+			System.out.println(TeamRepository.getChennaiTeamDetails());
+			System.out.println(TeamRepository.getDelhiCapitalsTeamDetails());
+			System.out.println(TeamRepository.getGujratTitansTeamDetails());
+			System.out.println(TeamRepository.getLukhnowSuperGiantsTeamDetails());
+			System.out.println(TeamRepository.getRajasthanRoyalsTeamDetails());
+			System.out.println(TeamRepository.getSunrisersHydrabaadTeamDetails());
+			break;
+		}
+		
+		//get team details by short name
+		case 2:{
+			System.out.println("Please enter your fav team's short name: ");
+			String teamShortName = sc.next();
+			System.err.println("Entered team short name is : "+teamShortName);
+			getTeamByShortName(teamShortName);
+			break;	
+		}
+		
+		case 3:{
+			// for get team details by  id
+			//further logic should not have switch case
+			
+			if(id==101) {
+				System.out.println(TeamRepository.getMITeamDetails());
+			}
+			else if(id==102) {
+				System.out.println(TeamRepository.getChennaiTeamDetails());
+
+			}
+			else if(id==103) {
+				System.out.println(TeamRepository.getRCBTeamDetails());
+
+			}
+			else if(id==104) {
+				System.out.println(TeamRepository.getPunjabKings11TeamDetails());
+
+			}
+			else if(id==105) {
+				System.out.println(TeamRepository.getKolkattaNightRidersTeamDetails());
+
+			}
+			
+			else if(id==106) {
+				System.out.println(TeamRepository.getSunrisersHydrabaadTeamDetails());
+
+			}
+			else if(id==107) {
+				System.out.println(TeamRepository.getRajasthanRoyalsTeamDetails());
+
+			}
+			else if(id==108) {
+				System.out.println(TeamRepository.getDelhiCapitalsTeamDetails());
+
+			}
+			else if(id==109) {
+				System.out.println(TeamRepository.getGujratTitansTeamDetails());
+
+			}
+			else if(id==110) {
+				System.out.println(TeamRepository.getLukhnowSuperGiantsTeamDetails());
+
+			}
+			else {
+				System.out.println("Please enter valid id");
+			}	
+			break;
+			
+		}
+		
+		default:
+			throw new IllegalArgumentException("Unexpected value: " + input);
+		}
+	}
 	
-	public void printCSKTeamDetails() {
-		Team team = TeamRepository.getChennaiTeamDetails();
-		System.out.println(team.getcId());
-		System.out.println(team.getcTeamName());
-		System.out.println(team.getcCaptainName());
-		System.out.println(team.getcCoachName());
-		System.out.println(team.getcnRR());
-		System.out.println(team.cisQualified());
+	private void getTeamByShortName(String shortName) {
+		//here we write a code logic to get team details by short name 
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter shortName of team: ");
+		String shortName1 = sc.nextLine();
+
+		if (shortName1.equals("MI")) {
+			
+			System.out.println(TeamRepository.getMITeamDetails());
+		}
+		else if(shortName1.equals("RCB")){
+			System.out.println(TeamRepository.getRCBTeamDetails());
+		}
+		
+		else if(shortName1.equals("PK11")){
+			
+	     System.out.println(TeamRepository.getPunjabKings11TeamDetails());
+
+		}
+
+		else if(shortName1.equals("KKR")){
+	
+	    System.out.println(TeamRepository.getKolkattaNightRidersTeamDetails());
+
+	}
+
+		else if(shortName1.equals("CSK")){
+	
+	System.out.println(TeamRepository.getChennaiTeamDetails());
+	}
+
+		else if(shortName1.equals("DC")){
+	
+	System.out.println(TeamRepository.getDelhiCapitalsTeamDetails());
+
+	
+	}
+
+		else if(shortName1.equals("GT")){
+	
+	System.out.println(TeamRepository.getGujratTitansTeamDetails());
+
+	
+	}
+
+		else if(shortName1.equals("LSG")){
+	
+	System.out.println(TeamRepository.getLukhnowSuperGiantsTeamDetails());
+
+	}
+
+		else if(shortName1.equals("RR")){
+	
+	System.out.println(TeamRepository.getRajasthanRoyalsTeamDetails());
+
+		
+	}
+
+		else if(shortName1.equals("SH")){
+	
+	System.out.println(TeamRepository.getSunrisersHydrabaadTeamDetails());
+
+	
+	}
+
+		else{
+			
+			System.out.println("please enter valid team shortname");
+		}
+		
 	}
 		
-		public void printRCBTeamDetails() {
-			Team team = TeamRepository.getRCBTeamDetails();
-			System.out.println(team.getrId());
-			System.out.println(team.getrTeamName());
-			System.out.println(team.getrCaptainName());
-			System.out.println(team.getrCoachName());
-			System.out.println(team.getrnRR());
-			System.out.println(team.risQualified());
-		}
-		
-		public void printPunjaabKings11TeamDetails() {
-			Team team = TeamRepository.getPunjabKings11TeamDetails();
-			System.out.println(team.getpId());
-			System.out.println(team.getpCaptainName());
-			System.out.println(team.getpCoachName());
-			System.out.println(team.getpnRR());
-			System.out.println(team.pisQualified());
-			}
-		
-		public void printKolkattaNightRidersTeamDetails() {
-			Team team = TeamRepository.getKolkattaNightRidersTeamDetails();
-				System.out.println(team.getkId());
-				System.out.println(team.getkTeamName());
-				System.out.println(team.getkCaptainName());
-				System.out.println(team.getkCoachName());
-				System.out.println(team.getknRR());
-				System.out.println(team.kisQualified());
-			}
-		
-		public void printSunrisersHydrabaadTeamDetails() {
-			Team team = TeamRepository.getSunrisersHydrabaadTeamDetails();
-				System.out.println(team.getsId());
-				System.out.println(team.getsTeamName());
-				System.out.println(team.getsCaptainName());
-				System.out.println(team.getsCoachName());
-				System.out.println(team.getsnRR());
-				System.out.println(team.sisQualified());
-			}
-		
-		public void printRajasthanRoyalsTeamDetails() {
-			Team team = TeamRepository.getRajasthanRoyalsTeamDetails();
-				System.out.println(team.getRRId());
-				System.out.println(team.getRRTeamName());
-				System.out.println(team.getRRCaptainName());
-				System.out.println(team.getRRCoachName());
-				System.out.println(team.getRRnRR());
-				System.out.println(team.RRisQualified());
-			}
-		
-		public void printDelhiCapitalsTeamDetails() {
-			Team team = TeamRepository.getDelhiCapitalsTeamDetails();
-				System.out.println(team.getDCId());
-				System.out.println(team.getDCTeamName());
-				System.out.println(team.getDCCaptainName());
-				System.out.println(team.getDCCoachName());
-				System.out.println(team.getDCnRR());
-				System.out.println(team.DCisQualified());
-			}
-		
-		public void printGujratTitansTeamDetails() {
-			Team team = TeamRepository.getGujratTitansTeamDetails();
-				System.out.println(team.getGTId());
-				System.out.println(team.getGTTeamName());
-				System.out.println(team.getGTCaptainName());
-				System.out.println(team.getGTCoachName());
-				System.out.println(team.getGTnRR());
-				System.out.println(team.GTisQualified());
-			}
-		
-		public void printLukhnowSuperGiantsTeamDetails() {
-			Team team = TeamRepository.getLukhnowSuperGiantsTeamDetails();
-				System.out.println(team.getLSGId());
-				System.out.println(team.getLSGTeamName());
-				System.out.println(team.getLSGCaptainName());
-				System.out.println(team.getLSGCoachName());
-				System.out.println(team.getLSGnRR());
-				System.out.println(team.LSGisQualified());
-			}
-			
-		}
-
+}
 	
 	
 	
-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

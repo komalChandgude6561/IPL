@@ -20,136 +20,101 @@ public class TeamRepository {
 	
 	public static Team getChennaiTeamDetails() {
 		Team team = new Team();
-		team.setcId(102);
-		team.setcTeamName("Chennai");
-		team.setcCaptainName("Ms Dhoni");
-		team.setcCoachName("Stephen Fleming");
-		team.setcnRR(8.9f);
-		team.setcQualified(false);
+		team.setId(102);
+		team.setTeamName("Chennai");
+		team.setCaptainName("Ms Dhoni");
+		team.setCoachName("Stephen Fleming");
+		team.setnRR(8.9f);
+		team.setQualified(false);
 		return team;		
 	}
 	
 	public static Team getRCBTeamDetails() {
 		Team team = new Team();
-		team.setrId(103);
-		team.setcTeamName("RCB");
-		team.setrCaptainName("Rajat Patidar");
-		team.setrCoachName("Andy flower");
-		team.setrnRR(9.8f);
-		team.setrisQualified(true);
+		team.setId(103);
+		team.setTeamName("RCB");
+		team.setCaptainName("Rajat Patidar");
+		team.setCoachName("Andy flower");
+		team.setnRR(9.8f);
+		team.setQualified(true);
 		return team;
 	}
 	
 	public static Team getPunjabKings11TeamDetails() {
 		Team team = new Team();
-		team.setpId(104);
-		team.setpTeamName("PunjabKings11");
-		team.setpCaptainName("Shreyas Iyer");
-		team.setpCoachName("Rickey Ponting");
-		team.setpnRR(6.7f);
-		team.setpisQualified(false);
+		team.setId(104);
+		team.setTeamName("PunjabKings11");
+		team.setCaptainName("Shreyas Iyer");
+		team.setCoachName("Rickey Ponting");
+		team.setnRR(6.7f);
+		team.setQualified(false);
 		return team;
 	}
 	
 	public static Team getKolkattaNightRidersTeamDetails() {
 		Team team = new Team();
-		team.setkId(105);
-		team.setkTeamName("Kolkatta knight riders");
-		team.setkCaptainName("Ajinkya rahane");
-		team.setkCoachName("Chandrakant pandit");
-		team.setknRR(9.0f);
-		team.setkisQualified(false);
+		team.setId(105);
+		team.setTeamName("Kolkatta knight riders");
+		team.setCaptainName("Ajinkya rahane");
+		team.setCoachName("Chandrakant pandit");
+		team.setnRR(9.0f);
+		team.setQualified(false);
 		return team;
 	}
 	
 	public static Team getSunrisersHydrabaadTeamDetails() {
 		Team team = new Team();
-		team.setsId(106);
-		team.setsTeamName("Sunrisers Hydrabaad");
-		team.setsCaptainName("Pat Cummins");
-		team.setsCoachName("Danneil vettori");
-		team.setsnRR(8.0f);
-		team.setsisQualified(false);
+		team.setId(106);
+		team.setTeamName("Sunrisers Hydrabaad");
+		team.setCaptainName("Pat Cummins");
+		team.setCoachName("Danneil vettori");
+		team.setnRR(8.0f);
+		team.setQualified(false);
 		return team;
 	}
 	
 	public static Team getRajasthanRoyalsTeamDetails() {
 		Team team = new Team();
-		team.setsId(107);
-		team.setsTeamName("Rajasthan Royals");
-		team.setsCaptainName("Sanju Samson");
-		team.setsCoachName("Rahul Dravid");
-		team.setsnRR(8.5f);
-		team.setsisQualified(false);
+		team.setId(107);
+		team.setTeamName("Rajasthan Royals");
+		team.setCaptainName("Sanju Samson");
+		team.setCoachName("Rahul Dravid");
+		team.setnRR(8.5f);
+		team.setQualified(false);
 		return team;
 	}
 	
 	public static Team getDelhiCapitalsTeamDetails() {
 		Team team = new Team();
-		team.setDCId(108);
-		team.setDCTeamName("Delhi Capitals");
-		team.setDCCaptainName("Axar Patel");
-		team.setDCCoachName("Hemang Badani");
-		team.setDCnRR(9.5f);
-		team.setDCisQualified(false);
+		team.setId(108);
+		team.setTeamName("Delhi Capitals");
+		team.setCaptainName("Axar Patel");
+		team.setCoachName("Hemang Badani");
+		team.setnRR(9.5f);
+		team.setQualified(false);
 		return team;
 	}
 	
 	public static Team getGujratTitansTeamDetails() {
 		Team team = new Team();
-		team.setDCId(109);
-		team.setDCTeamName("Gujraat Titans");
-		team.setDCCaptainName("Shubman Gill");
-		team.setDCCoachName("Aashish Nehra");
-		team.setDCnRR(7.5f);
-		team.setDCisQualified(false);
+		team.setId(109);
+		team.setTeamName("Gujraat Titans");
+		team.setCaptainName("Shubman Gill");
+		team.setCoachName("Aashish Nehra");
+		team.setnRR(7.5f);
+		team.setQualified(false);
 		return team;
 	}
 	
 	public static Team getLukhnowSuperGiantsTeamDetails() {
 		Team team = new Team();
-		team.setDCId(110);
-		team.setDCTeamName("Lukhnow  Super Giants");
-		team.setDCCaptainName("Rishabh pant");
-		team.setDCCoachName("justin Langer");
-		team.setDCnRR(6.5f);
-		team.setDCisQualified(false);
+		team.setId(110);
+		team.setTeamName("Lukhnow  Super Giants");
+		team.setCaptainName("Rishabh pant");
+		team.setCoachName("justin Langer");
+		team.setnRR(6.5f);
+		team.setQualified(false);
 		return team;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

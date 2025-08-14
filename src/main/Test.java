@@ -7,38 +7,15 @@ public class Test {
 	public static void main(String[] args) {
 
 		TeamService service = new TeamService();
-		service.printTeamDetails();
-		System.out.println(".........................................................................");
-	    service.printCSKTeamDetails();
-		System.out.println(".........................................................................");
-
-		service.printRCBTeamDetails();
-		System.out.println(".........................................................................");
+		service.selectOptions();
 		
-		service.printPunjaabKings11TeamDetails();
-		System.out.println(".........................................................................");
-
-
-		service.printKolkattaNightRidersTeamDetails();
-		System.out.println("...............................................................................");
 		
-		service.printSunrisersHydrabaadTeamDetails();
-		System.out.println("...............................................................................");
+		/*After completing task 1 and 2
+		 * task  no 3 --> 
+		 * add a option for user to get team details by id
+		 * only first switch case should be used
+		 * condition-->do not use switch case for second step
+		 */
 		
-		service.printRajasthanRoyalsTeamDetails();
-		System.out.println("................................................................................");
-		
-		service.printDelhiCapitalsTeamDetails();
-		System.out.println("................................................................................");
-		
-		service.printGujratTitansTeamDetails();
-		System.out.println("................................................................................");
-		
-		service.printLukhnowSuperGiantsTeamDetails();
-		System.out.println("................................................................................");
-
-System.out.println("githun");
-
-
 	}
 }
